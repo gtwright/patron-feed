@@ -32,3 +32,9 @@ functions:
       - http:
           path: ical
           method: get
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get

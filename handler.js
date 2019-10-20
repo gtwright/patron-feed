@@ -31,3 +31,10 @@ module.exports.redirect = async event => {
 
 	return response;
 };
+
+module.exports.hello = async event => {
+	return {
+		statusCode: 200,
+		body: "Connected"
+	};
+};
