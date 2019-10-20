@@ -35,6 +35,6 @@ module.exports.redirect = async event => {
 module.exports.hello = async event => {
 	return {
 		statusCode: 200,
-		body: { message: "Connected" }
+		body: JSON.stringify({ message: "Connected" })
 	};
 };
