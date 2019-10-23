@@ -1,5 +1,3 @@
-"use strict";
-
 const getFeed = require("./lib/getPatronFeed");
 const makeiCal = require("./lib/iCalByInstance");
 
