@@ -8,5 +8,8 @@
 		"ical-generator": "^1.8.1",
 		"serverless-domain-manager": "^3.3.0",
 		"striptags": "^3.1.1"
+	},
+	"jshintConfig": {
+		"node": true
 	}
 }
