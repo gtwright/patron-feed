@@ -32,6 +32,12 @@ functions:
       - http:
           path: ical
           method: get
+  otherFeed:
+    handler: handler.otherCal
+    events:
+      - http:
+          path: othercal
+          method: get
   hello:
     handler: handler.hello
     events:
