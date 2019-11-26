@@ -27,6 +27,9 @@ module.exports.otherCal = (event, context, callback) => {
       const message = await makeOther(feed.data);
       //   const message = "{ test: 'message' }";
       const response = {
+        headers: {
+          "Content-Type": "text/html"
+        },
         statusCode: 200,
         body: message
       };
