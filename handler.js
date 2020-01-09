@@ -6,7 +6,8 @@ module.exports.ical = (event, context, callback) => {
   const url = `${process.env.feedDomain}/ticket/PatronTicket__PublicApiEventList`;
   getFeed(url)
     .then(async feed => {
-      const message = await makeiCal(feed.data);
+      const events = feed.data;
+      const message = await makeiCal(events);
       const response = {
         statusCode: 200,
         body: message
@@ -25,7 +26,6 @@ module.exports.otherCal = (event, context, callback) => {
   getFeed(url)
     .then(async feed => {
       const message = await makeOther(feed.data);
-      //   const message = "{ test: 'message' }";
       const response = {
         // headers: {
         //   "Content-Type": "text/html"
