@@ -10,6 +10,9 @@ module.exports.ical = (event, context, callback) => {
       const message = await makeiCal(events);
       const response = {
         statusCode: 200,
+        header: {
+          "Content-Type": "text/calendar"
+        },
         body: message
       };
       callback(null, response);
